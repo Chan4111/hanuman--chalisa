@@ -6,51 +6,93 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        body{
-    background-image:url(hanu.jpg );
+/* Base styles (already in your HTML <style>) */
+body {
+    background-image: url(hanu.jpg);
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
     font-size: 35px;   
 }
-.box{
+.box {
     width: 700px;
-    background-image:url(hanu.jpg );
+    background-image: url(hanu.jpg);
     background-size: cover;
-    height: 350px;
+    height: auto;
     margin: 30px auto;
     color: rgb(157, 146, 137);
     border-radius: 20px 0px 20px 0px;
-    border: inline 21px;
-    border-width: 30px;
-    background-clip:padding-box;
-    border:8px inset rgb(130, 123, 123);
+    border: 8px inset rgb(130, 123, 123);
     overflow: auto;
+    padding: 15px;
 }
-.box p{
- margin: 20px 40px;
- text-align: center;
- color: rgb(227, 220, 220);
- font-size: 30px;
- text-transform: uppercase;
-}
-.box h1{
+.box p {
+    margin: 20px 40px;
     text-align: center;
-    border: #020202 20px;
+    color: rgb(227, 220, 220);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.box h1 {
+    text-align: center;
     color: #0ff407;
     font-size: 60px;
-    border-width: 25px;
     text-decoration: underline;
 }
-h2{
+h2 {
     color: rgb(144, 197, 194);
     font-size: 40px;
 }
-audio{
-    background-attachment: fixed;
+
+/* -----------------------
+   Responsive for tablets
+   ----------------------- */
+@media (max-width: 1024px) {
+    .box {
+        width: 90%;
+        height: auto;
+    }
+    .box h1 {
+        font-size: 45px;
+    }
+    .box p {
+        font-size: 22px;
+        margin: 10px 15px;
+    }
+    h2 {
+        font-size: 28px;
+    }
 }
 
-    </style>
+/* -----------------------
+   Responsive for mobile
+   ----------------------- */
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+        background-attachment: scroll;
+    }
+    .box {
+        width: 95%;
+        padding: 10px;
+        margin: 15px auto;
+    }
+    .box h1 {
+        font-size: 32px;
+    }
+    .box p {
+        font-size: 16px;
+        margin: 8px;
+        text-align: justify;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    audio {
+        width: 90%;
+    }
+}
+</style>
 </head>
 <body>
     <audio controls>
@@ -175,3 +217,4 @@ audio{
 
 </body>
 </html>
+
